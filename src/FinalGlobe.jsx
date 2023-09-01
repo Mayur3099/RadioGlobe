@@ -11,7 +11,6 @@ import Globe from 'react-globe.gl';
 import filters from "./assets/filters";
 import defaultImage from "./assets/radio.jpg";
 
-
 const FinalGlobe = () => {
     // Radio Browser API
 
@@ -31,7 +30,7 @@ const FinalGlobe = () => {
 
     useEffect(() => {
         setupApi(stationFilter).then((data) => {
-            console.log(data);
+            // console.log(data);
             setStations(data);
         });
     }, [stationFilter, resetApi, apiLimit]);
@@ -243,8 +242,8 @@ const FinalGlobe = () => {
                             );
                         })}
                 </div>
-                <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-                <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a class="hover:underline">RadioEarth</a>. All Rights Reserved.</span>
+                <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+                <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a class="hover:underline">RadioEarth</a>. All Rights Reserved.</span>
             </div>
 
         </div>
